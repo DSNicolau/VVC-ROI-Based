@@ -1,3 +1,18 @@
+# VTM reference software for VVC ROI-Based
+
+This software is based on the [VTM](https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM/-/tree/VTM-23.4?ref_type=tags) reference software for VVC, modified to support region-of-interest (ROI) based encoding.
+
+The ROIs are easily defined through a 8-bit binary mask (0- background, 255-foreground). This mask can be passed to the encoder using the `InputMaskPath` or `-mi` command-line flag. The desired QP value for the background can be set using the `QPBackground` or `-qbg` flag, while the foreground QP is set using the standard `-q` parameter.
+
+
+If the ROI mask or the background QP is not specified, the encoder defaults to standard VVC encoding, applying a uniform QP across the entire image. During the encoding process, all Coding Units (CUs) that intersect with the ROI mask are encoded using the foreground QP, and all others are encoded using the background QP. 
+
+
+
+
+
+
+
 VTM reference software for VVC
 ==============================
 
