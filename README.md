@@ -8,11 +8,6 @@ The ROIs are easily defined through a 8-bit binary mask (0- background, 255-fore
 If the ROI mask or the background QP is not specified, the encoder defaults to standard VVC encoding, applying a uniform QP across the entire image. During the encoding process, all Coding Units (CUs) that intersect with the ROI mask are encoded using the foreground QP, and all others are encoded using the background QP. 
 
 
-
-
-
-
-
 VTM reference software for VVC
 ==============================
 
